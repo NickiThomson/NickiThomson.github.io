@@ -191,6 +191,8 @@
 					strokeOpacity: 1,
 					strokeWeight: 2
 				});
+
+				Path.setMap(map);
 			}
 
 
