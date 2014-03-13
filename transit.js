@@ -172,7 +172,10 @@
    			 		/*} else if (i<18){
    			 			pathCoords[12][0][i-12] = new google.maps.LatLng(mLat, mLong);
    			 		}*/ }
-   			 		if (i>= 17 && linecolor == 'red'){
+   			 		if (i== 12 && linecolor == 'red'){
+   			 			pathCoords2[0] = new google.maps.LatLng(mLat, mLong);
+   			 		}
+   			 		if (i>= 18 && linecolor == 'red'){
    			 			pathCoords2[i-17] = new google.maps.LatLng(mLat, mLong);
    			 		}
 
