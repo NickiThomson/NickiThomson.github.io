@@ -59,7 +59,11 @@
 				//request.onreadystatechange = callback();
 				//callback();
 
-/*				
+/*				// Open info window on click of marker
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.setContent(marker.title);
+					infowindow.open(map, marker);
+				});
 
 				// Calling Google Places API
 				var request = {
@@ -83,7 +87,7 @@
 				}
 			}*/
 
-			function createMarker(place)
+		/*	function createMarker(place)
 			{
 				console.log("In createMarker");
 				var placeLoc = place.geometry.location;
@@ -96,7 +100,7 @@
 					infowindow.close();
 					infowindow.setContent(place.name);
 					infowindow.open(map, this);
-				}
+				}*/
 
 			    /*function parse()
 				{
