@@ -17,8 +17,7 @@
 			function init()
 			{
 				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-				request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
-				request.send(null);
+
 				getMyLocation();
 			}
 
@@ -55,7 +54,8 @@
 					infowindow.open(map, marker);
 				});
 				console.log('Next is get T info');
-
+				request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+				request.send(null);
 				request.onreadystatechange = dataReady;
 
 				//Get T info
