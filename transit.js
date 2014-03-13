@@ -13,10 +13,16 @@
 			var places;
 			var tstopsData;
 			var linecolor;
+			var stations;
+			var stationsData;
+\
 
 			function init()
 			{
 				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+				stationsData.open("get", "latlang.JSON", true);
+				stations = JSON.parse(stationsData.responseText);
 
 				getMyLocation();
 			}
@@ -134,17 +140,19 @@
 //            		linecolor = data["line"];
 //            		tstopsDom = document.getElementById("schedule");
  //           		tstopsDom.innerHTML = tstopsData["schedule"] 
+ 					markStops();
 
 
        			 } else if (request.readyState == 4 && request.status == 500){
        			 	console.log("ERROR-Y Stuff!");
        			 }
-       			 markStops()
 
    			 }
 
    			 function markStops(){
-
+   			 	for (var i=0; i<tstopsData["schedule"].length; i++){
+   			 		me = new google.maps.LatLng();
+   			 	}
    			 }
 
 
