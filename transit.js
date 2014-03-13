@@ -25,8 +25,6 @@
 				request.send(null);
 				request.onreadystatechange = callback;
 				//stations = JSON.parse(request.responseText);
-
-				getMyLocation();
 			}
 
 			function getMyLocation()
@@ -130,6 +128,7 @@
         		{
            			str = request.responseText;
            			stations = JSON.parse(str);
+           			getMyLocation();
 //            		linecolor = data["line"];  
        			 }
    			 }
