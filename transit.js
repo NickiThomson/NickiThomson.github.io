@@ -11,12 +11,14 @@
 			var marker;
 			var infowindow = new google.maps.InfoWindow();
 			var places;
-			var tstops;
+			var tstopsData;
 			var linecolor;
 
 			function init()
 			{
 				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+				request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+				request.send(null);
 				getMyLocation();
 			}
 
@@ -54,10 +56,12 @@
 				});
 				console.log('Next is get T info');
 
+				request.onreadystatechange = dataReady;
+
 				//Get T info
-				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+				/*request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 				request.send(null);
-				callback();
+				callback();*/
 
 /*				// Open info window on click of marker
 				google.maps.event.addListener(marker, 'click', function() {
@@ -119,6 +123,19 @@
        			 }
    			 }
 
+   			 function dataReady(){
+   			 	console.log(request.readyState, request.status);
+   			 	if (request.readyState == 4 && request.status == 200) 
+        		{
+           			tstopsData = JSON.parse(request.responseText);
+            		linecolor = data["line"];
+//            		tstopsDom = document.getElementById("schedule");
+ //           		tstopsDom.innerHTML = tstopsData["schedule"] 
+
+       			 } else if (request.readyState == 4 && request.status == 500){
+       			 	console.log("ERROR-Y Stuff!");
+       			 }
+   			 }
 
 
 
