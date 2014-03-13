@@ -158,11 +158,22 @@
    			 		var mLat = stations[linecolor][i]['lat'];
    			 		var mLong = stations[linecolor][i]['long'];
    			 		var mark = new google.maps.LatLng(mLat, mLong);
+   			 		var iconcolor;
+   			 		if (linecolor=='red'){
+   			 			iconcolor = 'star.png';
+   			 		} else if (linecolor == 'blue'){
+   			 			iconcolor = 'starblue.png';
+   			 		} else {
+   			 			iconcolor = 'starorange.png';
+   			 		}
+
    			 		pathCoords[i] = new google.maps.LatLng(mLat, mLong);
 
    			 		marker = new google.maps.Marker({
 					position: mark,
-					title: stations[linecolor][i]['stop']
+					title: stations[linecolor][i]['stop'],
+					
+					icon:  	iconcolor;
 
 				});
 				marker.setMap(map);
