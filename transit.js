@@ -23,7 +23,7 @@
 				request.open("get", "latlang.json", true);
 				request.send(null);
 				request.onreadystatechange = callback;
-				stations = JSON.parse(request.responseText);
+				//stations = JSON.parse(request.responseText);
 
 				getMyLocation();
 			}
