@@ -16,6 +16,7 @@
 			var stations;
 			var stationsData = new XMLHttpRequest();
 			var pathCoords = new Array();
+			var pathCoords2 = new Array();
 
 			function init()
 			{
@@ -171,7 +172,7 @@
    			 		/*} else if (i<18){
    			 			pathCoords[12][0][i-12] = new google.maps.LatLng(mLat, mLong);
    			 		}*/ }else {
-   			 			pathCoords[12][i-18] = new google.maps.LatLng(mLat, mLong);
+   			 			pathCoords2[i-18] = new google.maps.LatLng(mLat, mLong);
    			 		}
 
    			 		marker = new google.maps.Marker({
@@ -190,10 +191,13 @@
 						infowindow.open(map, this);
 					});
 				}
-				createPolyLine();
+				createPolyLine(pathCoords);
+				if (linecolor == 'red'){
+					createPolyLine(pathCoords2);
+				}
 			}
 
-			function createPolyLine(){
+			function createPolyLine(pcoords){
 				/*var pathCoords;
 				for (var i=0; i<stations[linecolor].length; i++){
 					pathCoords.push(stations[linecolor].getPosition);
@@ -209,7 +213,7 @@
 						color = '#FE9A2E';
 					}
 				var Path = new google.maps.Polyline({
-					path: pathCoords,
+					path: pcoords,
 					geodesic: true,
 					strokeColor: color,
 					strokeOpacity: 1,
