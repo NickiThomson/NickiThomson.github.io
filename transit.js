@@ -178,11 +178,11 @@
 
 
 					if (linecolor == 'red'){
-						color = '#DF0101',
+						color = '#DF0101';
 					} else if (linecolor == 'blue'){
-						color = '#0000FF',
+						color = '#0000FF';
 					} else {
-						color = '#FE9A2E',
+						color = '#FE9A2E';
 					}
 				var Path = new google.maps.Polyline({
 					path: stations[linecolor],
