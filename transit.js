@@ -172,7 +172,7 @@
 					position: mark,
 					title: stations[linecolor][i]['stop'],
 				
-					//icon:iconcolor
+					icon:iconcolor
 
 				});
    			 		console.log(linecolor);
