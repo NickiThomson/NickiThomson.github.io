@@ -162,8 +162,9 @@
 						infowindow.open(map, this);
 					}
 				}
+			}
 
-			
+
  
 
 
