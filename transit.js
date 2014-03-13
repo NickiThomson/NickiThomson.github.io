@@ -186,10 +186,10 @@
 					}
 				var Path = new google.maps.Polyline({
 					path: stations[linecolor],
-					geodesic: true;
+					geodesic: true,
 					strokeColor: color,
 					strokeOpacity: 1,
-					strokeWeight: 2,
+					strokeWeight: 2
 				});
 			}
 
