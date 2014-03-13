@@ -166,7 +166,13 @@
    			 			iconcolor = 'starorange.png';
    			 		}
 
-   			 		pathCoords[i] = new google.maps.LatLng(mLat, mLong);
+   			 		if (i< 12 || linecolor != 'red'){
+   			 			pathCoords[i] = new google.maps.LatLng(mLat, mLong);
+   			 		} else if (i<18){
+   			 			pathCoords[12][0][i-12] = new google.maps.LatLng(mLat, mLong);
+   			 		} else {
+   			 			pathCoords[12][1][i-18] = new google.maps.LatLng(mLat, mLong);
+   			 		}
 
    			 		marker = new google.maps.Marker({
 					position: mark,
