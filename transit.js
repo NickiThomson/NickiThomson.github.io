@@ -21,6 +21,7 @@
 				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 				stationsData.open("get", "latlang.JSON", true);
+				stationsData.send(null);
 				stations = JSON.parse(stationsData.responseText);
 
 				getMyLocation();
