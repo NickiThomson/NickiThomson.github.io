@@ -173,11 +173,10 @@
 			}
 
 			function createPolyLine(){
-				var pathCoords = {
-					for (var i=0; i<stations[linecolor].length; i++){
-						new google.maps.LatLng(stations[linecolor][i]['lat'], stations[linecolor][i]['long']);
-					}
-				};
+				
+
+
+
 					if (linecolor == 'red'){
 						color = '#DF0101',
 					} else if (linecolor == 'blue'){
@@ -186,7 +185,7 @@
 						color = '#FE9A2E',
 					}
 				var Path = new google.maps.Polyline({
-					path: pathCoords,
+					path: stations[linecolor],
 					geodesic: true;
 					strokeColor: color,
 					strokeOpacity: 1,
