@@ -129,7 +129,7 @@
    			 	if (request.readyState == 4 && request.status == 200) 
         		{
            			tstopsData = JSON.parse(request.responseText);
-            		linecolor = data["line"];
+//            		linecolor = data["line"];
 //            		tstopsDom = document.getElementById("schedule");
  //           		tstopsDom.innerHTML = tstopsData["schedule"] 
 
