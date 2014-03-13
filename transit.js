@@ -56,8 +56,8 @@
 				//Get T info
 				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 				request.send(null);
-				request.onreadystatechange = callback();
-				//callback();
+				//request.onreadystatechange = callback();
+				callback();
 
 /*				// Open info window on click of marker
 				google.maps.event.addListener(marker, 'click', function() {
@@ -87,7 +87,7 @@
 				}
 			}*/
 
-		/*	function createMarker(place)
+			function createMarker(place)
 			{
 				console.log("In createMarker");
 				var placeLoc = place.geometry.location;
@@ -100,7 +100,7 @@
 					infowindow.close();
 					infowindow.setContent(place.name);
 					infowindow.open(map, this);
-				}*/
+				}
 
 			    /*function parse()
 				{
