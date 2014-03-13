@@ -110,9 +110,10 @@
 
 			function callback() 
 			{
+        		console.log("In callback");
         		if (request.readyState == 4 && request.status == 200) 
         		{
-           			 str = request.responseText;
+           			str = request.responseText;
            			tstops = JSON.parse(str);
             		linecolor = data["line"];  
        			 }
