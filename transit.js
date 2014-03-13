@@ -155,9 +155,10 @@
    			 	linecolor = tstopsData['line'];
 
    			 	for (var i=0; i<stations[linecolor].length; i++){
-   			 		pathCoords.push(stations[linecolor].getPostion);
+
    			 		var mark = new google.maps.LatLng(stations[linecolor][i]['lat'], stations[linecolor][i]['long']);
-   			 		
+   			 		pathCoords[i] = new google.maps.LatLng(stations[linecolor][i]['lat'], stations[linecolor][i]['long']);
+
    			 		marker = new google.maps.Marker({
 					position: mark,
 					title: stations[linecolor][i]['stop']
