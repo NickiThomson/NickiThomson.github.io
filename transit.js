@@ -151,7 +151,7 @@
    			 }
 
    			 function markStops(){
-   			 	linecolor = tstopsData[line];
+   			 	linecolor = tstopsData['line'];
 
    			 	for (var i=0; i<stations[linecolor].length; i++){
 
