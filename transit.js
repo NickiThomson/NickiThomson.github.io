@@ -151,8 +151,10 @@
    			 }
 
    			 function markStops(){
-   			 	for (var i=0; i<tstopsData["schedule"].length; i++){
-   			 		me = new google.maps.LatLng();
+   			 	linecolor = tstopsData[line];
+
+   			 	for (var i=0; i<stations[linecolor].length; i++){
+
    			 	}
    			 }
 
