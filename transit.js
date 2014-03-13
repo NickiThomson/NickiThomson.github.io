@@ -14,7 +14,7 @@
 			var tstopsData;
 			var linecolor;
 			var stations;
-			var stationsData;
+			var stationsData = new XMLHttpRequest();
 
 			function init()
 			{
