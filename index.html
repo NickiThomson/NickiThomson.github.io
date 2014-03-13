@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-
 <html>
-
 <head>
-	<title> Nicki Thomson </title>
-	<meta charset="UTF-8">
+<!--	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
+	<title> Transit </title>
 	<link rel="stylesheet" href="styling.css" />
+<!--	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script> -->
+   <!-- <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="transit.js"> </script>
+
 </head>
 
-<body id = "body1">
-<h1> Nicki Thomson </h1>
-<p> <img src="Me.jpg" alt ="Nicki Thomson">
-</p>
-<a href= "bio.html"> Biography </a> <br/>
-<a href= "resume.html"> Resume </a>
-
+<body onload = "init()">
+	<div id="map_canvas"></div>
 </body>
+
 
 </html>
