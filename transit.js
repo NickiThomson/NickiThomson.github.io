@@ -92,20 +92,22 @@
 				}
 			}*/
 
-			function createMarker(place)
+	/*		function createMarker()
 			{
 				console.log("In createMarker");
-				var placeLoc = place.geometry.location;
+
+
+
 				var marker = new google.maps.Marker({
 					map: map,
-					position: place.geometry.location
+					position: 
 				}
 
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.close();
 					infowindow.setContent(place.name);
 					infowindow.open(map, this);
-				});
+				});*/
 
 			    /*function parse()
 				{
@@ -137,6 +139,11 @@
        			 } else if (request.readyState == 4 && request.status == 500){
        			 	console.log("ERROR-Y Stuff!");
        			 }
+       			 markStops()
+
+   			 }
+
+   			 function markStops(){
 
    			 }
 
