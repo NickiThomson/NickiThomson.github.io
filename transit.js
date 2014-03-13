@@ -181,7 +181,7 @@
 				for (var i=0; i<stations[linecolor].length; i++){
 					pathCoords.push(stations[linecolor].getPosition);
 				}*/
-				console.log{'in polyline bro'};
+				console.log('in polyline bro');
 
 
 					if (linecolor == 'red'){
