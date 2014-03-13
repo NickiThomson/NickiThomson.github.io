@@ -56,7 +56,7 @@
 				//Get T info
 				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 				request.send(null);
-				//request.onreadystatechange = callback();
+				request.onreadystatechange = callback();
 				//callback();
 
 /*				// Open info window on click of marker
