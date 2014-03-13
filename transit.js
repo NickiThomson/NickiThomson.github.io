@@ -15,7 +15,7 @@
 			var linecolor;
 			var stations;
 			var stationsData = new XMLHttpRequest();
-			var pathCoords;
+			var pathCoords = new Array();
 
 			function init()
 			{
