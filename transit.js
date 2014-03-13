@@ -189,11 +189,11 @@
    			 		console.log(linecolor);
 				marker.setMap(map);
 
-	   			 	google.maps.event.addListener(mark, 'click', function() {
+	   			 /*	google.maps.event.addListener(mark, 'click', function() {
 						infowindow.close();
 						infowindow.setContent(stations[linecolor][i]['stop']);
 						infowindow.open(map, this);
-					});
+					});*/
 				}
 				createPolyLine(pathCoords);
 				if (linecolor == 'red'){
@@ -225,6 +225,10 @@
 			}
 
 			function addInfoTo(stop){
+
+			}
+
+			function findClosestStation(){
 
 			}
 
