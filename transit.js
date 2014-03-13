@@ -56,8 +56,12 @@
 				//Get T info
 				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 				request.send(null);
-				//request.onreadystatechange = callback();
-				callback();
+				if (request.readyState == 4 && request.status == 200) 
+        		{
+           			str = request.responseText;
+           			tstops = JSON.parse(str);
+            		linecolor = data["line"];  
+       			 }
 
 /*				// Open info window on click of marker
 				google.maps.event.addListener(marker, 'click', function() {
