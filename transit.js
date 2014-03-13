@@ -174,8 +174,9 @@
 
 			function createPolyLine(){
 				var pathCoords;
-				/*for (var i=0; i<stations[linecolor].length; i++){
-					pathCoords.push(stations[linecolor])*/
+				for (var i=0; i<stations[linecolor].length; i++){
+					pathCoords.push(stations[linecolor].getPosition);
+				}
 
 
 
@@ -187,7 +188,7 @@
 						color = '#FE9A2E';
 					}
 				var Path = new google.maps.Polyline({
-					path: stations[linecolor].getPosition,
+					path: pathCoords,
 					geodesic: true,
 					strokeColor: color,
 					strokeOpacity: 1,
