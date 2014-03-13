@@ -11,6 +11,7 @@
 			var marker;
 			var infowindow = new google.maps.InfoWindow();
 			var places;
+			var tstops;
 
 			function init()
 			{
@@ -63,7 +64,7 @@
 			}
 
 			// Taken from http://code.google.com/apis/maps/documentation/javascript/places.html
-			function callback(results, status)
+			/*function callback(results, status)
 			{
 				if (status == google.maps.places.PlacesServiceStatus.OK) {
 					alert("Got places back!");
@@ -72,7 +73,7 @@
 						createMarker(results[i]);
 					}
 				}
-			}
+			}*/
 
 			function createMarker(place)
 			{
@@ -88,3 +89,22 @@
 					infowindow.open(map, this);
 				});
       }
+
+    function parse()
+	{
+		request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+		request.send(null);
+		request.onreadystatechange = callback;
+
+	function callback() 
+	{
+        if (request.readyState == 4 && request.status == 200) 
+        {
+            str = request.responseText;
+            data = JSON.parse(str);
+            linecolor = data["line"];
+            fillStations();   
+        }
+    }
+
+}
