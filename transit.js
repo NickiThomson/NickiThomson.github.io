@@ -101,11 +101,11 @@
 					position: place.geometry.location
 				}
 
-				google.maps.event.addListener(marker, 'click', function addStuff() {
+				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.close();
 					infowindow.setContent(place.name);
 					infowindow.open(map, this);
-				}
+				});
 
 			    /*function parse()
 				{
