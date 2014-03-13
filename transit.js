@@ -173,7 +173,7 @@
 						infowindow.open(map, this);
 					});
 				}
-				createPolyLine;
+				createPolyLine();
 			}
 
 			function createPolyLine(){
