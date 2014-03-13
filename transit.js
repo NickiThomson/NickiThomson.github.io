@@ -161,6 +161,7 @@
 						infowindow.setContent(stations[linecolor][i]['stop']);
 						infowindow.open(map, this);
 					});
+					mark.setMap(map);
 				}
 			}
 
