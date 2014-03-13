@@ -46,7 +46,7 @@
 				});
 				marker.setMap(map);
 
-				// Open info window on click of marker
+/*				// Open info window on click of marker
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.setContent(marker.title);
 					infowindow.open(map, marker);
@@ -59,7 +59,7 @@
 					types: ['food']
 				};
 				service = new google.maps.places.PlacesService(map);
-				service.search(request, callback);
+				service.search(request, callback);*/
 			}
 
 			// Taken from http://code.google.com/apis/maps/documentation/javascript/places.html
