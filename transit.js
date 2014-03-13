@@ -155,13 +155,15 @@
 
    			 	for (var i=0; i<stations[linecolor].length; i++){
    			 		var mark = new google.maps.LatLng(stations[i]['lat'], stations[i]['long']);
-   			 	}
-   			 	google.maps.event.addListener(mark, 'click', function() {
-					infowindow.close();
-					infowindow.setContent(stations[i]['stop']);
-					infowindow.open(map, this);
+   			 	
+	   			 	google.maps.event.addListener(mark, 'click', function() {
+						infowindow.close();
+						infowindow.setContent(stations[i]['stop']);
+						infowindow.open(map, this);
+					}
 				}
    			 }
+
 
 
 
