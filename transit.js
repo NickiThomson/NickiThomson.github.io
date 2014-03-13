@@ -174,7 +174,6 @@
 					title: stations[linecolor][i]['stop'],
 					
 					icon:iconcolor
-				}
 
 				});
 				marker.setMap(map);
