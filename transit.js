@@ -58,6 +58,7 @@
 				request.send(null);
 				if (request.readyState == 4 && request.status == 200) 
         		{
+        			console.log('here');
            			str = request.responseText;
            			tstops = JSON.parse(str);
             		linecolor = data["line"];  
