@@ -155,13 +155,18 @@
 
    			 	for (var i=0; i<stations[linecolor].length; i++){
    			 		var mark = new google.maps.LatLng(stations[linecolor][i]['lat'], stations[linecolor][i]['long']);
-   			 	
+   			 		
+   			 		marker = new google.maps.Marker({
+					position: mark,
+					title: stations[linecolor][i]['stop']
+				});
+				marker.setMap(map);
+
 	   			 	google.maps.event.addListener(mark, 'click', function() {
 						infowindow.close();
 						infowindow.setContent(stations[linecolor][i]['stop']);
 						infowindow.open(map, this);
 					});
-					mark.setMap(map);
 				}
 			}
 
