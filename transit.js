@@ -52,17 +52,12 @@
 					infowindow.setContent(marker.title);
 					infowindow.open(map, marker);
 				});
+				console.log('Next is get T info');
 
 				//Get T info
 				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 				request.send(null);
-				if (request.readyState == 4 && request.status == 200) 
-        		{
-        			console.log('here');
-           			str = request.responseText;
-           			tstops = JSON.parse(str);
-            		linecolor = data["line"];  
-       			 }
+				callback();
 
 /*				// Open info window on click of marker
 				google.maps.event.addListener(marker, 'click', function() {
