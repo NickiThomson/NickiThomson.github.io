@@ -160,7 +160,7 @@
 						infowindow.close();
 						infowindow.setContent(stations[i]['stop']);
 						infowindow.open(map, this);
-					}
+					});
 				}
 			}
 
