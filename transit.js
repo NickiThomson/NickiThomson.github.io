@@ -171,7 +171,8 @@
    			 			pathCoords[i] = new google.maps.LatLng(mLat, mLong);
    			 		/*} else if (i<18){
    			 			pathCoords[12][0][i-12] = new google.maps.LatLng(mLat, mLong);
-   			 		}*/ }else {
+   			 		}*/ }
+   			 		if (i>= 17 && linecolor == 'red'){
    			 			pathCoords2[i-18] = new google.maps.LatLng(mLat, mLong);
    			 		}
 
