@@ -172,8 +172,8 @@
    			 		/*} else if (i<18){
    			 			pathCoords[12][0][i-12] = new google.maps.LatLng(mLat, mLong);
    			 		}*/ }
-   			 		if (linecolor == 'red'){
-   			 			pathCoords2[i] = new google.maps.LatLng(mLat, mLong);
+   			 		if (i>= 17 && linecolor == 'red'){
+   			 			pathCoords2[i-17] = new google.maps.LatLng(mLat, mLong);
    			 		}
 
    			 		marker = new google.maps.Marker({
