@@ -154,7 +154,7 @@
    			 	linecolor = tstopsData['line'];
 
    			 	for (var i=0; i<stations[linecolor].length; i++){
-   			 		var mark = new google.maps.LatLng(stations[linecolor][i]['lat'], stations[i]['long']);
+   			 		var mark = new google.maps.LatLng(stations[linecolor][i]['lat'], stations[linecolor][i]['long']);
    			 	
 	   			 	google.maps.event.addListener(mark, 'click', function() {
 						infowindow.close();
