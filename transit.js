@@ -15,6 +15,7 @@
 			var linecolor;
 			var stations;
 			var stationsData = new XMLHttpRequest();
+			var pathCoords;
 
 			function init()
 			{
@@ -154,6 +155,7 @@
    			 	linecolor = tstopsData['line'];
 
    			 	for (var i=0; i<stations[linecolor].length; i++){
+   			 		pathCoords.push(stations[linecolor].getPostion);
    			 		var mark = new google.maps.LatLng(stations[linecolor][i]['lat'], stations[linecolor][i]['long']);
    			 		
    			 		marker = new google.maps.Marker({
@@ -173,10 +175,10 @@
 			}
 
 			function createPolyLine(){
-				var pathCoords;
+				/*var pathCoords;
 				for (var i=0; i<stations[linecolor].length; i++){
 					pathCoords.push(stations[linecolor].getPosition);
-				}
+				}*/
 
 
 
