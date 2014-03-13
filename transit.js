@@ -15,7 +15,6 @@
 			var linecolor;
 			var stations;
 			var stationsData;
-\
 
 			function init()
 			{
