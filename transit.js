@@ -173,7 +173,7 @@
    			 			pathCoords[12][0][i-12] = new google.maps.LatLng(mLat, mLong);
    			 		}*/ }
    			 		if (linecolor == 'red'){
-   			 			pathCoords2[i-18] = new google.maps.LatLng(mLat, mLong);
+   			 			pathCoords2[i] = new google.maps.LatLng(mLat, mLong);
    			 		}
 
    			 		marker = new google.maps.Marker({
