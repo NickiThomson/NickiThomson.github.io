@@ -12,6 +12,7 @@
 			var infowindow = new google.maps.InfoWindow();
 			var places;
 			var tstops;
+			var linecolor;
 
 			function init()
 			{
@@ -47,6 +48,11 @@
 				});
 				marker.setMap(map);
 
+				//Get T info
+				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+				request.send(null);
+				request.onreadystatechange = callback;
+
 /*				// Open info window on click of marker
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.setContent(marker.title);
@@ -77,6 +83,7 @@
 
 			function createMarker(place)
 			{
+				console.log("In createMarker");
 				var placeLoc = place.geometry.location;
 				var marker = new google.maps.Marker({
 					map: map,
@@ -88,23 +95,24 @@
 					infowindow.setContent(place.name);
 					infowindow.open(map, this);
 				});
-      }
 
-    function parse()
-	{
-		request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
-		request.send(null);
-		request.onreadystatechange = callback;
+			    /*function parse()
+				{
+				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+				request.send(null);
+				request.onreadystatechange = callback;*/
 
-	function callback() 
-	{
-        if (request.readyState == 4 && request.status == 200) 
-        {
-            str = request.responseText;
-            data = JSON.parse(str);
-            linecolor = data["line"];
-            fillStations();   
-        }
-    }
+			function callback() 
+			{
+        		if (request.readyState == 4 && request.status == 200) 
+        		{
+           			 str = request.responseText;
+           			tstops = JSON.parse(str);
+            		linecolor = data["line"];  
+       			 }
+   			 }
 
 }
+      }
+
+
