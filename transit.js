@@ -92,7 +92,7 @@
 				}
 			}*/
 
-	/*		function createMarker(place)
+			function createMarker(place)
 			{
 				console.log("In createMarker");
 				var placeLoc = place.geometry.location;
@@ -105,7 +105,7 @@
 					infowindow.close();
 					infowindow.setContent(place.name);
 					infowindow.open(map, this);
-				}*/
+				}
 
 			    /*function parse()
 				{
@@ -133,9 +133,11 @@
 //            		tstopsDom = document.getElementById("schedule");
  //           		tstopsDom.innerHTML = tstopsData["schedule"] 
 
+
        			 } else if (request.readyState == 4 && request.status == 500){
        			 	console.log("ERROR-Y Stuff!");
        			 }
+
    			 }
 
 
