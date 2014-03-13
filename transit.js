@@ -163,7 +163,7 @@
    			 			iconcolor = 'star.png';
    			 		} else if (linecolor == 'blue'){
    			 			iconcolor = 'starblue.png';
-   			 		} else {
+   			 		} else if (linecolor =='orange'){
    			 			iconcolor = 'starorange.png';
    			 		}
 
@@ -172,10 +172,11 @@
    			 		marker = new google.maps.Marker({
 					position: mark,
 					title: stations[linecolor][i]['stop'],
-					
-					icon:iconcolor
+				
+					//icon:iconcolor
 
 				});
+   			 		console.log(linecolor);
 				marker.setMap(map);
 
 	   			 	google.maps.event.addListener(mark, 'click', function() {
