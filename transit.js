@@ -20,9 +20,9 @@
 			{
 				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-				stationsData.open("get", "latlang.json", true);
-				stationsData.send(null);
-				stations = JSON.parse(stationsData.responseText);
+				request.open("get", "latlang.json", true);
+				request.send(null);
+				stations = JSON.parse(request.responseText);
 
 				getMyLocation();
 			}
