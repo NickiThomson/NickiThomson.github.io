@@ -22,6 +22,7 @@
 
 				request.open("get", "latlang.json", true);
 				request.send(null);
+				request.onreadystatechange = callback;
 				stations = JSON.parse(request.responseText);
 
 				getMyLocation();
@@ -127,7 +128,7 @@
         		if (request.readyState == 4 && request.status == 200) 
         		{
            			str = request.responseText;
-           			tstops = JSON.parse(str);
+           			stations = JSON.parse(str);
 //            		linecolor = data["line"];  
        			 }
    			 }
