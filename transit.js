@@ -54,6 +54,7 @@
 					infowindow.open(map, marker);
 				});
 				console.log('Next is get T info');
+				
 				request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 				request.send(null);
 				request.onreadystatechange = dataReady;
@@ -119,7 +120,7 @@
         		{
            			str = request.responseText;
            			tstops = JSON.parse(str);
-            		linecolor = data["line"];  
+//            		linecolor = data["line"];  
        			 }
    			 }
 
