@@ -173,7 +173,7 @@
 					position: mark,
 					title: stations[linecolor][i]['stop'],
 					
-					icon:  	iconcolor;
+					icon:  	iconcolor
 
 				});
 				marker.setMap(map);
