@@ -47,17 +47,19 @@
 					title: "Here I Am!"
 				});
 				marker.setMap(map);
-
-				//Get T info
-				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
-				request.send(null);
-				request.onreadystatechange = callback;
-
-/*				// Open info window on click of marker
+				// Open info window on click of marker
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.setContent(marker.title);
 					infowindow.open(map, marker);
 				});
+
+				//Get T info
+				request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+				request.send(null);
+				//request.onreadystatechange = callback();
+				callback();
+
+/*				
 
 				// Calling Google Places API
 				var request = {
@@ -88,13 +90,13 @@
 				var marker = new google.maps.Marker({
 					map: map,
 					position: place.geometry.location
-				});
+				}
 
 				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.close();
 					infowindow.setContent(place.name);
 					infowindow.open(map, this);
-				});
+				}
 
 			    /*function parse()
 				{
@@ -112,7 +114,7 @@
        			 }
    			 }
 
-}
+
 
 
 
