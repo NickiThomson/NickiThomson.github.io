@@ -198,4 +198,4 @@ function infoWindowContent(i){
 <td><a href="https://docs.google.com/forms/d/1z7x0lbIhNNf2MOQujYq5Vi4xfrGW03aSGDGqfNBYsMM/viewform" target="_blank">Lab 2: HTTP and Developer Tools</a></td>
 </tr> */
 
-function 
+//function 
