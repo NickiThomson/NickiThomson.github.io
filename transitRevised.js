@@ -142,7 +142,7 @@ function markStops(){
 	if (linecolor == 'red'){
 		createPolyLine(pathCoords2);
 	}
-	findClosestStation();
+	//findClosestStation();
 }
 
 function createPolyLine(pcoords){
