@@ -237,7 +237,7 @@ function errorSoDone(){
 	google.maps.event.addListener(meMarker, 'click', function() {
 		infowindow.open(map, meMarker);
 	});
-	infowindow.open();
+	infowindow.open(map, meMarker);
 }
 
 function noErrorDone(minI){
