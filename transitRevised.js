@@ -61,10 +61,10 @@ function renderMap()
 	});
 	meMarker.setMap(map);
 	// Open info window on click of marker
-	google.maps.event.addListener(meMarker, 'click', function() {
+/*	google.maps.event.addListener(meMarker, 'click', function() {
 		infowindow.setContent(meMarker.title);
 		infowindow.open(map, meMarker);
-	});
+	});*/
 	console.log('Next is get T info');
 	
 	request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
@@ -94,6 +94,7 @@ function callback()
 
 	 } else if (request.readyState == 4 && request.status == 500){
 	 	console.log("ERROR-Y Stuff!");
+	 	errorSoDone();
 	 }
 
  }
@@ -106,14 +107,7 @@ function markStops(){
 		var mLong = stations[linecolor][i]['long'];
 		var mark = new google.maps.LatLng(mLat, mLong);
 		var iconcolor = 't.jpg';
-		/*if (linecolor=='red'){
-			iconcolor = 'star.png';
-		} else if (linecolor == 'blue'){
-			iconcolor = 'starblue.png';
-		} else if (linecolor =='orange'){
-			iconcolor = 'starorange.png';
-		}*/
-		//iconcolor = 'starorange.png'
+
 		if (i< 18 || linecolor != 'red'){
 			pathCoords[i] = new google.maps.LatLng(mLat, mLong);
 		}
@@ -123,7 +117,7 @@ function markStops(){
 		if (i>= 18 && linecolor == 'red'){
 			pathCoords2[i-17] = new google.maps.LatLng(mLat, mLong);
 		}
-	//console.log('gonna make some markers');
+
 	markers[i] = new google.maps.Marker({
 		position: mark,
 		title: stations[linecolor][i]['stop'],
@@ -235,4 +229,11 @@ function findClosestStation(){
 function convertMetersToMiles(d){
 	d = d * 0.000621371192;
 	return d;
+}
+
+function errorSoDone(){
+	google.maps.event.addListener(meMarker, 'click', function() {
+		infowindow.setContent('Here! \r\n Error so much fail');
+		infowindow.open(map, meMarker);
+	});
 }
