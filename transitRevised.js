@@ -135,11 +135,11 @@ function markStops(){
 	infowindows[i] = new google.maps.InfoWindow();
 	infowindows[i].setContent(stations[linecolor][0]['stop']);
 
-		 google.maps.event.addListener(markers[i], 'click', function() {
+		 google.maps.event.addListener(markers[i], 'click', function(i) {
 			//infowindow.close();
 			//infowindow.setPosition(markers[i].position);
 			//infowindow.setContent(stations[linecolor][0]['stop']);
-			//infowindows[i].setContent("You found a station!");
+			infowindows[i].setContent("You found a station!");
 			infowindows[i].open(map, markers[i]);
 		});
 	}
@@ -172,5 +172,7 @@ function createPolyLine(pcoords){
 	Path.setMap(map);
 }
 
+function setInfoWindows(i){
 
+}
 
