@@ -135,7 +135,9 @@ function markStops(){
 	infowindows[i] = new google.maps.InfoWindow();
 	infowindows[i].setContent(stations[linecolor][0]['stop']);
 
-		 google.maps.event.addListener(markers[i], 'click', function(i) {
+		 google.maps.event.addListener(markers[i], 'click', makeMapListener(infowindows[i], markers[i]));
+
+		 	/*function(i) {
 			//infowindow.close();
 			//infowindow.setPosition(markers[i].position);
 			//infowindow.setContent(stations[linecolor][0]['stop']);
@@ -144,7 +146,7 @@ function markStops(){
 				infowindows[i].setContent("You found a station!");
 				infowindows[i].open(map, markers[i]);
 			}
-		});
+		});*/
 	}
 	createPolyLine(pathCoords);
 	if (linecolor == 'red'){
@@ -175,7 +177,7 @@ function createPolyLine(pcoords){
 	Path.setMap(map);
 }
 
-function setInfoWindows(i){
-
+function makeMapListener(window, m) {
+  return function() { window.open(map, m); };
 }
 
