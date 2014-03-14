@@ -182,6 +182,7 @@ function makeMapListener(window, m) {
   	for (key in infowindows){
   		infowindows[key].close();
   	}
+  	infowindow.close();
   	window.open(map, m); 
   };
 }
