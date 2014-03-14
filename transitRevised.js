@@ -179,6 +179,9 @@ function createPolyLine(pcoords){
 
 function makeMapListener(window, m) {
   return function() { 
+  	for (key in infowindows){
+  		infowindows[key].close();
+  	}
   	window.open(map, m); 
   };
 }
