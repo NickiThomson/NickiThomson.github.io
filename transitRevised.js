@@ -105,7 +105,7 @@ function markStops(){
 		var mLat = stations[linecolor][i]['lat'];
 		var mLong = stations[linecolor][i]['long'];
 		var mark = new google.maps.LatLng(mLat, mLong);
-		var iconcolor;
+		var iconcolor = 't.jpg';
 		/*if (linecolor=='red'){
 			iconcolor = 'star.png';
 		} else if (linecolor == 'blue'){
@@ -128,7 +128,7 @@ function markStops(){
 		position: mark,
 		title: stations[linecolor][i]['stop'],
 
-		//icon: iconcolor
+		icon: iconcolor
 
 	});
 	//console.log('dat marker should be made bitch!');
