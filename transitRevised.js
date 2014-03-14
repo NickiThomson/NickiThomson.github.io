@@ -68,7 +68,7 @@ function renderMap()
 
 function callback() 
 {
-	console.log("In callback");
+	//console.log("In callback");
 	if (request.readyState == 4 && request.status == 200) 
 	{
 		str = request.responseText;
@@ -78,7 +78,7 @@ function callback()
 }
 
  function dataReady(){
- 	console.log(request.readyState, request.status);
+ 	//console.log(request.readyState, request.status);
  	if (request.readyState == 4 && request.status == 200) 
 	{
 		tstopsData = JSON.parse(request.responseText);
@@ -86,7 +86,7 @@ function callback()
 
 
 	 } else if (request.readyState == 4 && request.status == 500){
-	 	console.log("ERROR-Y Stuff!");
+	 	//console.log("ERROR-Y Stuff!");
 	 	errorSoDone();
 	 }
 
@@ -120,7 +120,7 @@ function markStops(){
 	});
 	//console.log('dat marker should be made bitch!');
 
-	console.log(linecolor);
+	//console.log(linecolor);
 	markers[i].setMap(map);
 	infowindows[i] = new google.maps.InfoWindow();
 	//infowindows[i].setContent(stations[linecolor][i]['stop']);
@@ -136,7 +136,7 @@ function markStops(){
 
 function createPolyLine(pcoords){
 
-	console.log('in polyline bro');
+	//console.log('in polyline bro');
 
 
 		if (linecolor == 'red'){
@@ -244,7 +244,7 @@ function createStationTable(i){
 			}
 		}
 	}
-	console.log(table);
+	//console.log(table);
 	return table;
 }
 
