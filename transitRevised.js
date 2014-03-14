@@ -233,10 +233,11 @@ function convertMetersToMiles(d){
 }
 
 function errorSoDone(){
+	infowindow.setContent('<p> You are here </br> So much fail </p>');
 	google.maps.event.addListener(meMarker, 'click', function() {
-		infowindow.setContent('<p> You are here </br> So much fail </p>');
 		infowindow.open(map, meMarker);
 	});
+	infowindow.open();
 }
 
 function noErrorDone(minI){
