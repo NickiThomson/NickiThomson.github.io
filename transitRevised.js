@@ -133,7 +133,7 @@ function markStops(){
 	markers[i].setMap(map);
 
 		 google.maps.event.addListener(markers[i], 'click', function() {
-			infowindow.close();
+			//infowindow.close();
 			//infowindow.setContent(stations[linecolor][0]['stop']);
 			infowindow.setContent("You found a station!");
 			infowindow.open(map, markers[i]);
