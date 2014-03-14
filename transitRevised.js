@@ -140,7 +140,7 @@ function markStops(){
 			//infowindow.setPosition(markers[i].position);
 			//infowindow.setContent(stations[linecolor][0]['stop']);
 			//infowindows[i].setContent("You found a station!");
-			infowindow[i].open(map, markers[i]);
+			infowindows[i].open(map, markers[i]);
 		});
 	}
 	createPolyLine(pathCoords);
