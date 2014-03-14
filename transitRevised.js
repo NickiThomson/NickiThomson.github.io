@@ -113,7 +113,7 @@ function markStops(){
 		} else if (linecolor =='orange'){
 			iconcolor = 'starorange.png';
 		}*/
-		iconcolor = 'starorange.png'
+		//iconcolor = 'starorange.png'
 		if (i< 18 || linecolor != 'red'){
 			pathCoords[i] = new google.maps.LatLng(mLat, mLong);
 		}
