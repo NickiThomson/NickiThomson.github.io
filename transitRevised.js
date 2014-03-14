@@ -178,6 +178,9 @@ function createPolyLine(pcoords){
 }
 
 function makeMapListener(window, m) {
-  return function() { window.open(map, m); };
+  return function() { 
+  	window.setContent(m.title);
+  	window.open(map, m); 
+  };
 }
 
