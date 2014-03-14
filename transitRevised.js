@@ -19,6 +19,7 @@ var stations;
 var stationsData = new XMLHttpRequest();
 var pathCoords = new Array();
 var pathCoords2 = new Array();
+var infowindows = new Array();
 
 function init()
 {
@@ -131,13 +132,15 @@ function markStops(){
 
 	console.log(linecolor);
 	markers[i].setMap(map);
+	infowindows[i] = new google.maps.InfoWindow();
+	infowindows[i].setContent(stations[linecolor][0]['stop']);
 
 		 google.maps.event.addListener(markers[i], 'click', function() {
 			//infowindow.close();
-			infowindow.setPosition(markers[i].position);
+			//infowindow.setPosition(markers[i].position);
 			//infowindow.setContent(stations[linecolor][0]['stop']);
-			infowindow.setContent("You found a station!");
-			infowindow.open(map, markers[i]);
+			//infowindows[i].setContent("You found a station!");
+			infowindow[i].open(map, markers[i]);
 		});
 	}
 	createPolyLine(pathCoords);
