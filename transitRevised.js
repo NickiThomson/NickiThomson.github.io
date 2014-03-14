@@ -42,7 +42,7 @@ function getMyLocation()
 		});
 	}
 	else {
-		alert("Geolocation is not supported by your web browser.  What a shame!");
+		alert("Geolocation is not supported by your web browser.");
 	}
 }
 
@@ -179,8 +179,7 @@ function makeMapListener(window, m) {
 
 function infoWindowContent(i){
 	var content = 
-	"<h2>" + i + "</h2>" +
-	"<h2>" + tstopsData['schedule'][i]['Destination'] + "</h2>";
+	"<h2>" + stations[linecolor][i]['stop'] + "</h2>";
 /*	'<table>'+
 	'<tr>' +
 	'<th> '*/
