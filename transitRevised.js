@@ -134,7 +134,8 @@ function markStops(){
 
 		 google.maps.event.addListener(markers[i], 'click', function() {
 			infowindow.close();
-			infowindow.setContent(stations[linecolor][0]['stop']);
+			//infowindow.setContent(stations[linecolor][0]['stop']);
+			infowindow.setContent("You found a station!");
 			infowindow.open(map, markers[i]);
 		});
 	}
