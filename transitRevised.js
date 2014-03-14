@@ -29,7 +29,6 @@ function init()
 	request.open("get", "latlang.json", true);
 	request.send(null);
 	request.onreadystatechange = callback;
-	//stations = JSON.parse(request.responseText);
 }
 
 function getMyLocation()
@@ -60,12 +59,6 @@ function renderMap()
 		title: "Here I Am!"
 	});
 	meMarker.setMap(map);
-	// Open info window on click of marker
-/*	google.maps.event.addListener(meMarker, 'click', function() {
-		infowindow.setContent(meMarker.title);
-		infowindow.open(map, meMarker);
-	});*/
-	console.log('Next is get T info');
 	
 	request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 	request.send(null);
@@ -176,6 +169,8 @@ function makeMapListener(window, m) {
 }
 
 function infoWindowContent(i){
+	var table = createStationTable(i);
+
 	var content = 
 	"<h2>" + stations[linecolor][i]['stop'] + "</h2>";
 /*	'<table>'+
@@ -230,6 +225,27 @@ function findClosestStation(){
 function convertMetersToMiles(d){
 	d = d * 0.000621371192;
 	return d;
+}
+
+function createStationTable(i){
+	var size = tstopsData["schedule"].length;
+	table = new Array;
+	stopOfInterest = markers[i].title;
+	var count = 0;
+	for(var j=0; j<size; j++){
+		destination = tstopsData["schedule"][i];
+
+		stops = destination["Predictions"];
+		for (k=0; k<stops.length; k++){
+			if (stops[k] == stopOfInterest){
+				table[count]['Seconds'] = stops[k]['Seconds'];
+				table[count]['Destination'] = stops[k]['Destionation'];
+				count++;
+			}
+		}
+	}
+	console.log(table);
+	return table;
 }
 
 function errorSoDone(){
