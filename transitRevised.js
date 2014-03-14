@@ -140,6 +140,7 @@ function markStops(){
 			//infowindow.setPosition(markers[i].position);
 			//infowindow.setContent(stations[linecolor][0]['stop']);
 			return function(){
+				console.log('in addListener function');
 				infowindows[i].setContent("You found a station!");
 				infowindows[i].open(map, markers[i]);
 			}
