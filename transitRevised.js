@@ -133,7 +133,7 @@ function markStops(){
 	console.log(linecolor);
 	markers[i].setMap(map);
 	infowindows[i] = new google.maps.InfoWindow();
-	infowindows[i].setContent(stations[linecolor][0]['stop']);
+	infowindows[i].setContent(stations[linecolor][i]['stop']);
 
 		 google.maps.event.addListener(markers[i], 'click', makeMapListener(infowindows[i], markers[i]));
 
@@ -179,7 +179,6 @@ function createPolyLine(pcoords){
 
 function makeMapListener(window, m) {
   return function() { 
-  	window.setContent(m.title);
   	window.open(map, m); 
   };
 }
