@@ -200,6 +200,12 @@ function infoWindowContent(i){
 </tr> */
 
 function findClosestStation(){
-	distance = google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[0].position);
+	var distance = google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[0].position);
+	distance = convertMetersToMiles(distance);
 	console.log(distance);
+}
+
+function convertMetersToMiles(d){
+	d = d * 0.000621371192;
+	return d;
 }
