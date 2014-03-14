@@ -179,6 +179,7 @@ function makeMapListener(window, m) {
 
 function infoWindowContent(i){
 	var content = 
+	"<h2>" + i + "</h2>" +
 	"<h2>" + tstopsData['schedule'][i]['Destination'] + "</h2>";
 /*	'<table>'+
 	'<tr>' +
