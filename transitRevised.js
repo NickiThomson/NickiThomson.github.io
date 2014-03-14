@@ -169,7 +169,7 @@ function makeMapListener(window, m) {
 }
 
 function infoWindowContent(i){
-	var table = createStationTable(i);
+	//var table = createStationTable(i);
 
 	var content = 
 	"<h2>" + stations[linecolor][i]['stop'] + "</h2>";
