@@ -135,7 +135,7 @@ function markStops(){
 		 google.maps.event.addListener(markers[i], 'click', function() {
 			infowindow.close();
 			infowindow.setContent(stations[linecolor][i]['stop']);
-			infowindow.open(map, this);
+			infowindow.open(map, markers[i]);
 		});
 	}
 	createPolyLine(pathCoords);
