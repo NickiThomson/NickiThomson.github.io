@@ -56,7 +56,7 @@ function renderMap()
 		position: me,
 		title: "Here I Am!"
 	});
-	marker.setMap(map);
+	meMarker.setMap(map);
 	// Open info window on click of marker
 	google.maps.event.addListener(meMarker, 'click', function() {
 		infowindow.setContent(meMarker.title);
