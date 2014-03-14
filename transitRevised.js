@@ -99,8 +99,8 @@ function callback()
 
 function markStops(){
 	linecolor = tstopsData['line'];
-
-	for (var i=0; i<stations[linecolor].length; i++){
+	var size = i<stations[linecolor].length
+	for (var i=0; size; i++){
 		var mLat = stations[linecolor][i]['lat'];
 		var mLong = stations[linecolor][i]['long'];
 		var mark = new google.maps.LatLng(mLat, mLong);
@@ -200,9 +200,33 @@ function infoWindowContent(i){
 </tr> */
 
 function findClosestStation(){
-	var distance = google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[0].position);
-	distance = convertMetersToMiles(distance);
-	console.log(distance);
+	var distance;
+	var minDistance; 
+	var minI = 0;
+	var size = stations[linecolor].length();
+
+	minDistance = google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[minI].position);
+	
+	for (var i=1; i<size; i++){
+		distance = google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[i].position);
+		if (distance < minDistance){
+			minDistance = distance;
+			minI = i;
+		}
+	}
+	/*distance = convertMetersToMiles(distance);
+	console.log(distance);*/
+	var here2there = new new google.maps.Polyline({
+		path: [meMarker.position, markers[minI].position],
+		geodesic: true,
+		strokeOpacity: 1,
+		strokeWeight: 2
+	});
+
+
+	return minI;
+
+
 }
 
 function convertMetersToMiles(d){
