@@ -99,7 +99,7 @@ function callback()
 
 function markStops(){
 	linecolor = tstopsData['line'];
-	var size = i<stations[linecolor].length
+	var size = i<stations[linecolor].length;
 	for (var i=0; size; i++){
 		var mLat = stations[linecolor][i]['lat'];
 		var mLong = stations[linecolor][i]['long'];
@@ -203,7 +203,7 @@ function findClosestStation(){
 	var distance;
 	var minDistance; 
 	var minI = 0;
-	var size = stations[linecolor].length();
+	var size = stations[linecolor].length;
 
 	minDistance = google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[minI].position);
 	
