@@ -179,8 +179,8 @@ function makeMapListener(window, m) {
 
 function infoWindowContent(i){
 	var content = 
-	"<h2>" tstopsData[i]['Destination'] "</h2>";
-	/*'<table>'+
+	"<h2>" + tstopsData[i]['Destination'] + "</h2>";
+/*	'<table>'+
 	'<tr>' +
 	'<th> '*/
 	return content;
@@ -197,3 +197,5 @@ function infoWindowContent(i){
 <td><a href="lecture_notes/http.html">Hypertext Transport Protocol (HTTP)</a></td>
 <td><a href="https://docs.google.com/forms/d/1z7x0lbIhNNf2MOQujYq5Vi4xfrGW03aSGDGqfNBYsMM/viewform" target="_blank">Lab 2: HTTP and Developer Tools</a></td>
 </tr> */
+
+function 
