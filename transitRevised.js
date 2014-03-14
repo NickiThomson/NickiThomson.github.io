@@ -122,7 +122,7 @@ function markStops(){
 		if (i>= 18 && linecolor == 'red'){
 			pathCoords2[i-17] = new google.maps.LatLng(mLat, mLong);
 		}
-
+	console.log('gonna make some markers');
 	markers[i] = new google.maps.Marker({
 		position: mark,
 		title: stations[linecolor][i]['stop'],
@@ -130,6 +130,7 @@ function markStops(){
 		//icon: iconcolor
 
 	});
+	console.log('dat marker should be made bitch!');
 
 	console.log(linecolor);
 	markers[i].setMap(map);
