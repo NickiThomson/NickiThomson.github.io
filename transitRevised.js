@@ -217,7 +217,7 @@ function findClosestStation(){
 	}
 	/*distance = convertMetersToMiles(distance);
 	console.log(distance);*/
-	var here2there = new new google.maps.Polyline({
+	var here2there = new google.maps.Polyline({
 		path: [meMarker.position, markers[minI].position],
 		geodesic: true,
 		strokeOpacity: 1,
