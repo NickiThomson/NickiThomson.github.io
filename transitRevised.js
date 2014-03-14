@@ -244,9 +244,11 @@ function noErrorDone(minI){
 	markers[minI].title + '</br> Distance: ' +
 	convertMetersToMiles(google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[minI].position)) +
 	' miles </p>';
-
-	google.maps.event.addListener(meMarker, 'click', function() {
 		infowindow.setContent(content);
+	
+	google.maps.event.addListener(meMarker, 'click', function() {
 		infowindow.open(map, meMarker);
 	});
+
+	infowindow.open(map, meMarker);
 }
