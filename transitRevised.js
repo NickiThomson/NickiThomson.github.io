@@ -138,7 +138,7 @@ function markStops(){
 	if (linecolor == 'red'){
 		createPolyLine(pathCoords2);
 	}
-	findClosestStation();
+	noErrorDone(findClosestStation());
 }
 
 function createPolyLine(pcoords){
@@ -162,6 +162,7 @@ function createPolyLine(pcoords){
 	});
 
 	Path.setMap(map);
+
 }
 
 function makeMapListener(window, m) {
@@ -233,7 +234,19 @@ function convertMetersToMiles(d){
 
 function errorSoDone(){
 	google.maps.event.addListener(meMarker, 'click', function() {
-		infowindow.setContent('<p> Here </br> So much fail </p>');
+		infowindow.setContent('<p> You are here </br> So much fail </p>');
+		infowindow.open(map, meMarker);
+	});
+}
+
+function noErrorDone(minI){
+	var content = '<p> You are here </br> Closest station is: ' +
+	markers[minI].title + '</br> Distance: ' +
+	convertMetersToMiles(google.maps.geometry.spherical.computeDistanceBetween (meMarker.position, markers[minI].position)) +
+	' miles </p>';
+
+	google.maps.event.addListener(meMarker, 'click', function() {
+		infowindow.setContent(content);
 		infowindow.open(map, meMarker);
 	});
 }
