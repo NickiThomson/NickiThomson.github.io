@@ -179,7 +179,7 @@ function makeMapListener(window, m) {
 
 function infoWindowContent(i){
 	var content = 
-	"<h2>" + tstopsData[i]['Destination'] + "</h2>";
+	"<h2>" + i + "</h2>";
 /*	'<table>'+
 	'<tr>' +
 	'<th> '*/
