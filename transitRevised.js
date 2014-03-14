@@ -99,8 +99,8 @@ function callback()
 
 function markStops(){
 	linecolor = tstopsData['line'];
-	var size = i<stations[linecolor].length;
-	for (var i=0; size; i++){
+	var size = stations[linecolor].length;
+	for (var i=0; i<size; i++){
 		var mLat = stations[linecolor][i]['lat'];
 		var mLong = stations[linecolor][i]['long'];
 		var mark = new google.maps.LatLng(mLat, mLong);
