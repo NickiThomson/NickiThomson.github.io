@@ -9,7 +9,7 @@ var myOptions = {
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 var map;
-var marker;
+var markers = new Array();
 var meMarker;
 var infowindow = new google.maps.InfoWindow();
 var places;
@@ -121,7 +121,7 @@ function markStops(){
 			pathCoords2[i-17] = new google.maps.LatLng(mLat, mLong);
 		}
 
-	marker = new google.maps.Marker({
+	markers[i] = new google.maps.Marker({
 		position: mark,
 		title: stations[linecolor][i]['stop'],
 
@@ -130,13 +130,13 @@ function markStops(){
 	});
 
 	console.log(linecolor);
-	marker.setMap(map);
+	markers[i].setMap(map);
 
-		 /*	google.maps.event.addListener(mark, 'click', function() {
+		 google.maps.event.addListener(markers[i], 'click', function() {
 			infowindow.close();
 			infowindow.setContent(stations[linecolor][i]['stop']);
 			infowindow.open(map, this);
-		});*/
+		});
 	}
 	createPolyLine(pathCoords);
 	if (linecolor == 'red'){
