@@ -183,6 +183,7 @@ function infoWindowContent(i){
 	/*'<table>'+
 	'<tr>' +
 	'<th> '*/
+	return content;
 }
 
 /* <tr>
