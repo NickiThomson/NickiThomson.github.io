@@ -33,40 +33,51 @@
     </div>
 
     <div class="container" ng-controller="resumeController">
-      <div class = "row">
-        <h2> {{ test }} </h2>
         <div class ="well">       
           <h3 id="resumeTitle"> Nicola Thomson </h3>
         </div>
-        <div class="col-sm-2"> </div>
-        <div class="col-sm-10">
-          <h4> Education </h4>
-          <div> Tufts University, Medford MA </div>
-          <div> Bachelor of Science in Computer Engineering, expected May 2016 </div>
-          <div> GPA: 3.53 </div>
-          <h4> Relevant Coursework </h4>
-          <div class = "col-sm-3"> Engineering </div>
-          <ul class = "col-sm-9" ng-show="clicked">
+        <div class = "row">
+          <div class="col-sm-2"> </div>
+          <div class="col-sm-10">
+            <h4> Education </h4>
+            <div> Tufts University, Medford MA </div>
+            <div> Bachelor of Science in Computer Engineering, expected May 2016 </div>
+            <div> GPA: 3.53 </div>
+            <h4> Relevant Coursework </h4>
+        <div class = "row">
+          <div class = "col-sm-3" ng-click="activate('engineering')"> Engineering </div>
+          <div class = "col-sm-9">
+           <ul ng-show ="categories.engineering"> 
             <li> Intro to Digital Logic Circuits </li>
             <li> Electronics 1 </li> 
             <li> Engineering Graphics </li>
             <li> Simple Robotics </li>
             <li> Intro to Electrical Systems </li> 
             <li> Intro to Mechanics Statics and Dynamics </li>
-          </ul>
-          <div class = "col-sm-3"> Computer Science </div>
-          <ul class = "col-sm-9">
-            <li> Data structures </li>
-            <li> Web Programming </li>
-            <li> Discrete Mathematics </li>
-            <li> Computational Theory </li>
-          </ul>
-          <div class = "col-sm-3"> Mathematics </div>
-          <ul class = "col-sm-9"> 
-            <li> Multivariable Calculus </li> 
-            <li> Differential Equations </li>
-          </ul>
-
+           </ul>
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-sm-3" ng-click="activate('computerScience')"> Computer Science </div>
+          <div class = "col-sm-9">
+            <ul ng-show = "categories.computerScience">
+              <li> Data structures </li>
+              <li> Web Programming </li>
+              <li> Discrete Mathematics </li>
+              <li> Computational Theory </li>
+            </ul>
+          </div>
+        </div>
+        <div class = "row">
+          <div class = "col-sm-3" ng-click="activate('mathematics')"> Mathematics </div>
+          <div class = "col-sm-9"> 
+            <ul ng-show = 'categories.mathematics'>
+              <li> Multivariable Calculus </li> 
+              <li> Differential Equations </li>
+            </ul>
+          </div>
+        </div>
+        <div class = 'row'>
           <h4> Projects </h4>
           <h4> Skills </h4>
           <div class="col-sm-3"> Software </div>
@@ -96,6 +107,7 @@
           <h4> Awards </h4>
           <h4> Activities/ Interests </h4>
         </div>
+      </div>
         </div>
       </div>
 
@@ -105,4 +117,5 @@
 <script src="bootstrap/js/bootstrap.js"></script>
 <script src="angular/angular.js"></script>
 <script src="app.js"></script>
+<script src="resumeController.js"></script>
 </html>
