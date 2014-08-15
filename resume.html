@@ -1,38 +1,5 @@
-<!DOCTYPE html>
 
-<html ng-app="nickiApp">
-
-<head>
-	<meta charset="utf-8">
-	<title> Nicki Thomson </title>
-	<meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel = "stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel = "stylesheet" href= "styling.css">
-
-</head>
-
-<body>
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Nicki Thomson</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="bio.html">About Nicki</a></li>  
-                </ul>
-              </li>
-            </ul>
-
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-    </div>
-
-    <div class="container" ng-controller="resumeController">
+    <div class="container">
         <div class ="well">       
           <h3 id="resumeTitle"> Nicola Thomson </h3>
         </div>
@@ -44,78 +11,27 @@
             <div> Bachelor of Science in Computer Engineering, expected May 2016 </div>
             <div> GPA: 3.53 </div>
             <h4> Relevant Coursework </h4>
-        <div class = "row">
-          <div class = "col-sm-3" ng-click="activate('engineering')"> Engineering </div>
-          <div class = "col-sm-9">
-           <ul ng-show ="categories.engineering"> 
-            <li> Intro to Digital Logic Circuits </li>
-            <li> Electronics 1 </li> 
-            <li> Engineering Graphics </li>
-            <li> Simple Robotics </li>
-            <li> Intro to Electrical Systems </li> 
-            <li> Intro to Mechanics Statics and Dynamics </li>
-           </ul>
-          </div>
-        </div>
-        <div class = "row">
-          <div class = "col-sm-3" ng-click="activate('computerScience')"> Computer Science </div>
-          <div class = "col-sm-9">
-            <ul ng-show = "categories.computerScience">
-              <li> Data structures </li>
-              <li> Web Programming </li>
-              <li> Discrete Mathematics </li>
-              <li> Computational Theory </li>
-            </ul>
-          </div>
-        </div>
-        <div class = "row">
-          <div class = "col-sm-3" ng-click="activate('mathematics')"> Mathematics </div>
-          <div class = "col-sm-9"> 
-            <ul ng-show = 'categories.mathematics'>
-              <li> Multivariable Calculus </li> 
-              <li> Differential Equations </li>
-            </ul>
-          </div>
-        </div>
-        <div class = 'row'>
+        <nt-resume category = 'categories.classes.engineering' ></nt-resume>
+
+        <nt-resume category = 'categories.classes.computerScience'></nt-resume>
+
+        <nt-resume category = 'categories.classes.mathematics'></nt-resume>
+
           <h4> Projects </h4>
           <h4> Skills </h4>
-          <div class="col-sm-3"> Software </div>
-          <ul class="col-sm-9">
-            <li> LTSPICE </li>
-            <li> SolidWorks </li>
-            <li> Autodesk Inventor </li>
-            <li> AutoCAD </li>
-            <li> MathCAD </li>
-          </ul>
-          <div class="col-sm-3"> Programming Languages </div>
-          <ul class="col-sm-9"> 
-            <li> MATLAB </li>
-            <li> C++ </li>
-            <li> Visual Basic </li>
-            <li> LabView </li>
-          </ul>
-          <div class="col-sm-3"> Web Programming </div>
-          <ul class = "col-sm-9">
-            <li> HTML </li>
-            <li> CSS </li>
-            <li> JavaScript </li>
-            <li> Bootstrap </li>
-            <li> AngularJS </li>
-          </ul>
+          <nt-resume category = "categories.skills.software"></nt-resume>
+          <nt-resume category = "categories.skills.programmingLanguages"></nt-resume>
+          <nt-resume category = "categories.skills.webProgramming"></nt-resume>
           <h4> Experience </h4> 
           <h4> Awards </h4>
           <h4> Activities/ Interests </h4>
         </div>
-      </div>
+        <div class = "col-sm-10 col-xs-0"></div>
+        <div class = "col-sm-2">      
+          <a href="NTResume_online.pdf" target="_blank">
+            <span class = "glyphicon glyphicon-download-alt"></span>
+            Download PDF</a>
         </div>
       </div>
 
-</body>
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.js"></script>
-<script src="angular/angular.js"></script>
-<script src="app.js"></script>
-<script src="resumeController.js"></script>
-</html>
+      </div>

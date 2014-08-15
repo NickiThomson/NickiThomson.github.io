@@ -1,5 +1,5 @@
 #photo-slides{
-	max-width: 640px
+	max-width: 640px;
 }
 
 #head {
@@ -26,4 +26,9 @@
 
 #resumeTitle {
 	text-align: center;
+}
+
+#resumeCategory, #chevron-right, #chevron-down 
+ {
+	cursor: pointer;
 }

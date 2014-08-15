@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="nickiApp">
 
 <head>
 	<meta charset="utf-8">
@@ -8,6 +8,7 @@
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel = "stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel = "stylesheet" href="bower_components/angular/angular-csp.css">
     <link rel = "stylesheet" href= "styling.css">
 
 </head>
@@ -16,13 +17,13 @@
       <div class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Nicki Thomson</a>
+            <a class="navbar-brand" href="/#/">Nicki Thomson</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="bio.html">About Nicki</a></li>
+              <li><a href="/#/resume">Resume</a></li>
+              <li><a href="/#/projects">Projects</a></li>
+              <li><a href="/#/bio">About Nicki</a></li>
                 </ul>
               </li>
             </ul>
@@ -32,74 +33,18 @@
         </div><!--/.container-fluid -->
     </div>
 
-	<div class = "container">
-		<div class="row">
-			<div class="col-md-3">
-				<div class = "well">
-				Nicki Thomson is currently a junior at Tufts University studying Computer Engineering, (which for those who don’t know, by the Tufts curriculum, is what you get when Electrical Engineering and Computer Science get together and have a baby). Additionally she is a member of a variety of campus groups, including Tufts Robotics Club, The Tufts Opera Ensemble, Alpha Omicron Pi, and Nicki is the Social Coordinator of the Tufts Ballroom Team.
-				<br> <br>
-				Nicki spent last summer as a software developer intern at IBM, helping to redesign the Emptoris Suite product’s log in workflow. This helped her to gain new web programming skills such as Bootstrap and AngularJS, as well as develop her existing ones. Nicki really enjoyed the vast amount of learning that came with this job, and hopes to be able to pursue more internships which allow her to learn so much.
-				<br> <br>
-				Prior to Tufts, Nicki attended six years of boarding school on a cliffside in England...
-				<a href="bio.html"> read more </a>
-
-				</div>
-			</div>
-
-			<div class="col-md-7">
-				<div id= "photo-slides" class="carousel slide" data-ride="carousel" data-interval = "5000" >
-					<!--<ol class="carousel-indicators">
-					    <li data-target="#photo-slides" data-slide-to="0" class="active"></li>
-					    <li data-target="#photo-slides" data-slide-to="1"></li>
-					</ol> -->
-
-					<div class = "carousel-inner">
-						<div class="item active">
-							<img src="photos/opera.jpg" alt = "Opera photo">
-							<div class = "carousel-caption">
-								Oprea Ensemble Performance of "Captain Lovelock", April 2014
-							</div>
-						</div>
-						<div class = "item">
-							<img src = "photos/aoii.jpg" alt = "AOII photo">
-							<div class = "carousel-caption">
-								Proud member of Alpha Omicron Pi
-							</div>
-						</div>
-						<div class = "item">
-							<img src= "photos/meanGirl.jpg" alt = "Robot Photo">
-							<div class="carousel-caption">
-								Sumo-robot "mean girl"
-							</div>
-						</div>
-						<div class = "item">
-							<img src = "photos/ballroom.jpg" alt = "Ballroom photo">
-							<div class = "carousel-caption">
-								Tufts Ballroom Competition 2013
-							</div>
-						</div>
-
-					</div>
-					<a class="left carousel-control" href="#photo-slides" role="button" data-slide="prev">
-				    	<span class="glyphicon glyphicon-chevron-left"></span>
-				    </a>
-				  	<a class="right carousel-control" href="#photo-slides" role="button" data-slide="next">
-				    	<span class="glyphicon glyphicon-chevron-right"></span>
-				  	</a>
-				</div>
-			</div>
-			<div class = "col-md-2" id="links">
-				<div class="well">
-					Links: </br>
-					<a href="https://github.com/NickiThomson"> GitHub </a> </br>
-					<a href="https://www.linkedin.com/pub/nicola-thomson/90/a53/bb8"> LinkedIn </a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div ng-view></div>
 
 </body>
 	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<!-- <script src="bootstrap/js/bootstrap.js"></script> -->
+<!--<script src="angular/angular.js"></script>
+<script src="angular/angular-route.js"></script>-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="resumeController.js"></script>
+<script src="resumeDirective.js"></script>
 </html>
