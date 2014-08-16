@@ -1,0 +1,34 @@
+#photo-slides{
+	max-width: 640px;
+}
+
+#head {
+/*	padding: 30px;
+	margin-bottom:30px;*/
+	padding: 0.5em 0.6em;
+}
+
+/*body{
+	background-color: #FF33CC
+}
+
+.well {
+	background-color: #FFADFF;
+	border-color: #101F3D
+}
+
+.navbar {*/
+	/*background-color: #101F3D;
+	border-color: #101F3D*/
+/*	background-color: #9900CC;
+	border-color: #101F3D
+}*/
+
+#resumeTitle {
+	text-align: center;
+}
+
+#resumeCategory, #chevron-right, #chevron-down 
+ {
+	cursor: pointer;
+}
