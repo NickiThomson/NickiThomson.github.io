@@ -1,10 +1,13 @@
         <div class = "row">
-          <div class = "col-sm-3 col-xs-7" ng-click="clicked = !clicked" id="resumeCategory"> {{category.title}} ... </div>
-          <div class = "col-sm-1 col-xs-5">
+          <div class = "col-md-4 col-xs-7" ng-click="clicked = !clicked" id="resumeCategory"> 
+            {{category.title}} 
+            <span ng-hide="clicked"> ... </span>
+          </div>
+          <div class = "col-md-1 col-xs-5">
             <span class="glyphicon glyphicon-chevron-right" ng-click="clicked = !clicked" ng-show="!clicked" id="chevron-right"></span>
             <span class="glyphicon glyphicon-chevron-down" ng-click="clicked = !clicked" ng-show="clicked" id="chevron-down"></span>
           </div>
-          <div class = "col-sm-8">
+          <div class = "col-sm-7">
            <ul collapse ="!clicked" ng-repeat = "item in category.items"> 
             <li> {{item}} </li>
            </ul>

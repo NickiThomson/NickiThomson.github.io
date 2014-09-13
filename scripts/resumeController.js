@@ -5,11 +5,16 @@ app.controller('resumeController', function($scope){
 			education : "Education",
 
 			classes : {
+				title : "Relevant Coursework",
+
 				engineering: {
 					title: "Engineering",
 					items: [
+						"Microprocessor Architecture And Applications",
+						"Linear Systems",
 						"Intro to Digital Logic Circuits",
 						"Electronics 1",
+						"Probabilistic Systems Analysis",
 						"Engineering Graphics",
 						"Simple Robotics",
 						"Intro to Electrical Systems",
@@ -35,16 +40,17 @@ app.controller('resumeController', function($scope){
 					]
 				}
 			},
-			skills : {
-				software: {
-					title : "Software", 
-					items : [
-						"LTSPICE",
-						"Solidworks",
-						"Autodesk Inventor",
-						"AutoCAD",
-						"MathCAD"
-					]
+				skills : {
+					title : "Skills",
+					software: {
+						title : "Software", 
+						items : [
+							"LTSPICE",
+							"Solidworks",
+							"Autodesk Inventor",
+							"AutoCAD",
+							"MathCAD"
+						]
 				},
 				programmingLanguages : {
 					title : "Programming Languages",
@@ -55,8 +61,8 @@ app.controller('resumeController', function($scope){
 						"LabView"
 					]
 				},
-				webProgramming : {
-					title : "Web Programming",
+				webDevelopment : {
+					title : "Web Development",
 					items : [
 						"HTML",
 						"CSS",
@@ -65,7 +71,20 @@ app.controller('resumeController', function($scope){
 						"AngularJS"
 					]
 				}
+			},
+			projects : {
+				title : "Projects"
+			},
+			experience : {
+				title : "Experience"
+			},
+			awards : {
+				title : "Awards"
+			},
+			activities : {
+				title : "Activities/ Interests"
 			}
+
 		};
 
 });

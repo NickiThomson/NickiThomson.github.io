@@ -16,6 +16,7 @@ app.directive('ntResumeSection', function(){
       scope: {
         title: '=',
       },
+      transclude: true,
       templateUrl: '/../views/resumeSectionDirective.html'
     };	
 });
