@@ -1,6 +1,6 @@
 //app.js
 
-var app = angular.module('nickiApp', ['ngRoute','ui.bootstrap', 'ui.bootstrap.carousel']);
+var app = angular.module('nickiApp', ['ngRoute','ui.bootstrap', 'ui.bootstrap.carousel', 'mgcrea.bootstrap.affix']);
 
 app.config(function($routeProvider, $locationProvider) {
   $routeProvider
@@ -12,12 +12,21 @@ app.config(function($routeProvider, $locationProvider) {
     controller: 'resumeController'
   })
   .when('/projects', {
-  	templateUrl: '/../views/projects.html'
+  	templateUrl: '/../views/projects.html/',
+    controller: 'resumeController'
   })
   .when('/bio',{
   	templateUrl: '/../views/bio.html'
   });
  });
+
+app.run(function($rootScope, $location, $anchorScroll, $routeParams) {
+  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    $location.hash($routeParams.scrollTo);
+    $anchorScroll();  
+  });
+});
+
 
 app.controller('carouselController', function($scope){
 	  $scope.myInterval = 5000;
