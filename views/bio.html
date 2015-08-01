@@ -1,15 +1,17 @@
 
     <div class = "container">
-      <p>
-        Nicki Thomson is currently a junior at Tufts University studying Computer Engineering, (which for those who don’t know, by the Tufts curriculum, is what you get when Electrical Engineering and Computer Science get together and have a baby). Additionally she is a member of a variety of campus groups, including Tufts Robotics Club, The Tufts Opera Ensemble, Alpha Omicron Pi, and Nicki is the Social Coordinator of the Tufts Ballroom Team.
-      </p>
-      <p>
-        Nicki spent last summer as a software developer intern at IBM, helping to redesign the Emptoris Suite product’s log in workflow. This helped her to gain new web programming skills such as Bootstrap and AngularJS, as well as develop her existing ones. Nicki really enjoyed the vast amount of learning that came with this job, and hopes to be able to pursue more internships which allow her to learn so much.
-      </p>
-      <p>
-        Prior to Tufts, Nicki attended six years of boarding school on a cliffside in England, where she completed her A Levels in Physics, Mathematics and Theatre Studies. During her time in England she also completed her Duke of Edinburgh’s Gold award, which is achieved with a long time commitment to a sport, a skill and a service project, as well as including a residential trip, and an outdoor expedition. 
-      </p>
-      <p>
-        Nicki is currently looking for summer employment for the summer of 2015, she hopes to gain a position which will give her more insight into Computer Engineering, and helps to give her an idea what she might like to study at grad school after her graduation in 2016.
-      </p>
+      <div ng-controller="bioController">
+        <p>
+          {{bioText.content[0]}}
+        </p>
+        <p>
+          {{bioText.content[1]}}
+        </p>
+        <p>
+          {{bioText.content[2]}}
+        </p>
+        <p>
+          {{bioText.content[3]}}
+        </p>
+      </div>
     </div>
