@@ -12,7 +12,7 @@ app.config(function($routeProvider, $locationProvider) {
     controller: 'resumeController'
   })
   .when('/projects', {
-  	templateUrl: '/../views/projects.html/',
+  	templateUrl: '/../views/projects.html',
     controller: 'resumeController'
   })
   .when('/bio',{
